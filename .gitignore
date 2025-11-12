@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+inputs/
+!inputs/twitter/data/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+!data/.gitkeep
+*.csv
+*.json
+*.sqlite
+*.db
+
+# Twitter export files
+like.js
+tweets.js
+*.js
+
+# PostgreSQL
+*.sql
+*.sql.gz
+
+# AWS
+*.pem
+*.key
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Playwright
+playwright-report/
+test-results/
+
+# Model cache
+.cache/
+models/
+
+# Secrets
+secrets/
+*.secret
+credentials.json
+
+# Node modules (if any)
+node_modules/
+
+# Coverage reports
+.coverage
+coverage.xml
+*.cover
+
+# Database dumps
+*.dump
+
+# uv package manager
+uv.lock
+.python-version
