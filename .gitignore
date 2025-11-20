@@ -42,6 +42,8 @@ data/
 !data/.gitkeep
 *.csv
 *.json
+!package-lock.json
+!**/package-lock.json
 *.sqlite
 *.db
 
