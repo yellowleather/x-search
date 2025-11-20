@@ -40,17 +40,15 @@ logs/
 # Data
 data/
 !data/.gitkeep
-*.csv
-*.json
-!package-lock.json
-!**/package-lock.json
-*.sqlite
-*.db
+data/**/*.csv
+data/**/*.json
+data/**/*.sqlite
+data/**/*.db
 
-# Twitter export files
-like.js
-tweets.js
-*.js
+# Twitter export files (in inputs/ directory)
+inputs/**/*.js
+inputs/**/like.js
+inputs/**/tweets.js
 
 # PostgreSQL
 *.sql
