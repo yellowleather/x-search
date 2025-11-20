@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Likes Capture</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Login View (shown when not authenticated) -->
+  <div id="loginView" class="view">
+    <div class="header">
+      <h1>🔐 X Likes Capture</h1>
+    </div>
+
+    <div class="content">
+      <p class="welcome-text">Welcome! Please log in to start capturing your liked tweets.</p>
+
+      <div id="loginError" class="error-message" style="display: none;"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <div class="button-group">
+          <button type="submit" id="loginBtn" class="btn btn-primary">Login</button>
+          <button type="button" id="registerBtn" class="btn btn-secondary">Register</button>
+        </div>
+      </form>
+
+      <div class="backend-status">
+        <span id="backendStatus" class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-text">Checking backend...</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authenticated View (shown when logged in) -->
+  <div id="authenticatedView" class="view" style="display: none;">
+    <div class="header">
+      <h1>📊 X Likes Capture</h1>
+    </div>
+
+    <div class="content">
+      <div class="user-info">
+        <p class="user-email">Logged in as: <strong id="userEmail"></strong></p>
+        <p class="status-text">
+          Status: <span id="statusIndicator" class="status-badge status-active">✅ Active</span>
+        </p>
+      </div>
+
+      <div class="stats-section">
+        <h3>Today</h3>
+        <ul class="stats-list">
+          <li>Captured: <strong id="capturedCount">0</strong> tweets</li>
+          <li>Synced: <strong id="syncedCount">0</strong> tweets</li>
+          <li>Queued: <strong id="queuedCount">0</strong> tweets</li>
+        </ul>
+      </div>
+
+      <div class="activity-section">
+        <p class="activity-text">Last capture: <span id="lastCapture">Never</span></p>
+        <p class="activity-text">Last sync: <span id="lastSync">Never</span></p>
+      </div>
+
+      <div id="notificationArea" class="notification" style="display: none;"></div>
+
+      <div class="button-group">
+        <button type="button" id="retryBtn" class="btn btn-secondary">Retry Queue</button>
+        <button type="button" id="settingsBtn" class="btn btn-secondary">Settings</button>
+      </div>
+
+      <div class="button-group">
+        <button type="button" id="logoutBtn" class="btn btn-outline">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading View -->
+  <div id="loadingView" class="view">
+    <div class="header">
+      <h1>X Likes Capture</h1>
+    </div>
+    <div class="content">
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
