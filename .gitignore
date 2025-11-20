@@ -1,43 +1,26 @@
+# ============================================================================
 # Python
+# ============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-venv/
-env/
-ENV/
-.venv
+.venv/
 pip-log.txt
 pip-delete-this-directory.txt
 .pytest_cache/
 .mypy_cache/
-.coverage
-htmlcov/
 *.egg-info/
-dist/
-build/
-inputs/
-!inputs/twitter/data/.gitkeep
 
-# Environment variables
-.env
-.env.local
-.env.*.local
+# ============================================================================
+# Node/JavaScript
+# ============================================================================
+node_modules/
 
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Logs
-logs/
-*.log
-
-# Data
+# ============================================================================
+# Data Files
+# ============================================================================
 data/
 !data/.gitkeep
 data/**/*.csv
@@ -45,61 +28,125 @@ data/**/*.json
 data/**/*.sqlite
 data/**/*.db
 
-# Twitter export files (in inputs/ directory)
+# Twitter/X export files (in inputs/ directory)
+inputs/
+!inputs/twitter/data/.gitkeep
 inputs/**/*.js
 inputs/**/like.js
 inputs/**/tweets.js
 
-# PostgreSQL
-*.sql
-*.sql.gz
+# Database files
+*.sqlite
+*.db
+*.dump
 
-# AWS
+# ============================================================================
+# Build Artifacts
+# ============================================================================
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Chrome Extension build artifacts
+src/chrome_extension/dist/
+src/chrome_extension/build/
+
+# ============================================================================
+# Chrome Extension Specific
+# ============================================================================
+# Packaged extensions
+*.crx
+
+# Chrome extension private signing keys (SECURITY - never commit!)
 *.pem
+
+# ============================================================================
+# Environment & Secrets
+# ============================================================================
+.env
+.env.local
+.env.*.local
+credentials.json
+secrets/
+*.secret
 *.key
 
-# Jupyter Notebooks
-.ipynb_checkpoints/
-*.ipynb
+# ============================================================================
+# Testing & Coverage
+# ============================================================================
+# Coverage reports
+coverage/
+.coverage
+coverage.xml
+*.lcov
+.nyc_output/
+*.cover
 
-# Temporary files
+# Test cache
+.jest/
+jest-cache/
+
+# ============================================================================
+# Logs
+# ============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+debug.log
+
+# ============================================================================
+# OS Files
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================================================
+# IDE
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
 tmp/
 temp/
 *.tmp
-
-# OS files
-Thumbs.db
-.DS_Store
-
-# Backup files
+*.temp
 *.bak
 *.backup
-*~
 
-# Playwright
-playwright-report/
-test-results/
+# ============================================================================
+# PostgreSQL
+# ============================================================================
+*.sql
+*.sql.gz
 
-# Model cache
+# ============================================================================
+# Cache
+# ============================================================================
 .cache/
-models/
 
-# Secrets
-secrets/
-*.secret
-credentials.json
-
-# Node modules (if any)
-node_modules/
-
-# Coverage reports
-.coverage
-coverage.xml
-*.cover
-
-# Database dumps
-*.dump
-
-# uv package manager
+# ============================================================================
+# Package Managers
+# ============================================================================
+# Python uv
 uv.lock
 .python-version
