@@ -33,7 +33,7 @@ async function clearAuth() {
 async function getSettings() {
   const result = await chrome.storage.local.get(['settings']);
   return {
-    backendUrl: 'https://api.yourservice.com',
+    backendUrl: 'https://tweet-capture-api-423049276532.us-central1.run.app',
     captureEnabled: true,
     ...result.settings
   };
